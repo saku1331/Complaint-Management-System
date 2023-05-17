@@ -1,0 +1,87 @@
+<?php
+
+session_start();
+
+if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !==true)
+{
+    header("location: userLogin.php");
+}
+
+
+?>
+<?php
+$insert = false;
+if (isset($_POST['name'])){
+    
+    $server="172.16.15.7";
+    $username="root";
+    $password="";
+
+    $con = mysqli_connect($server, $username, $password);
+    if (!$con){
+        die("connection to this database failed due to " . mysqli_connect_error());
+    }
+        // echo "Success connecting to the db";
+    $name = $_POST['name'];
+    $hostel = $_POST['hostel'];
+    $userid=$_SESSION['username'];
+    $rollno = $_POST['rollno'];
+    $email = $_POST['email'];
+    $compl = $_POST['compl'];
+    $sql = "INSERT INTO `dbms19`.`messcomplaint` (`name`,`hostel`,`userid`, `rollno`, 
+    `email`, `compl`, `dt`) VALUES
+    ('$name', '$hostel', '$userid', '$rollno', '$email', '$compl', current_timestamp());";
+    // echo $sql;
+    
+    if ($con->query($sql)==true){
+        //  echo "Successfully inserted";
+        $insert=true;
+    }
+    else{
+        echo "ERROR: $sql <br> $con->error";
+    }
+    $con->close(); 
+}
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complify</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Sriracha&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="hostelComplaint.css">
+</head>
+
+<body>
+    <!-- <img class="bg" src="bg.jpg" alt="IIIT Allahabad"> -->
+    <div class="container">
+        <h1>Welcome to Online Hostel & Mess Complaint Registration System</h1>
+        <h3>Mess Feedback/Complaint</h3>
+
+        <p>Please fill in the required details: </p>
+        <?php if($insert == true){
+        echo "<p class='submitMsg'>Your feedback has successfully been recorded! </p>";}?> 
+        <form action="messComplaint.php" method="post">
+            <input type="text" name="name" id="name" placeholder="Enter your name" required>
+
+            <div class="radio-container">
+                <p class="radio-p">Please select your hostel: </p>  
+                <select name="hostel" id="hostel" class="select1">
+                    <option value="GH">Girls Hostel</option>
+                    <option value="BH">Boys Hostel</option>
+                </select>
+            </div>
+            <input type="text" name="rollno" id="rollno" placeholder="Enter your roll no." required>
+            <input type="email" name="email" id="email" placeholder="Enter your email id" required>
+            <textarea name="compl" id="compl" cols="30" rows="10"
+                placeholder="Please provide your feedback" required></textarea>
+            <button class="btn">Submit</button>
+        </form>
+    </div>
+    <script src="mess.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    transition: 0.2s linear;
+    text-transform: capitalize;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: rgb(228, 228, 219);
+}
+
+.row-book {
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.book-info {
+    text-align: left;
+}
+
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 6px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 120px;
+}
+
+/* Header */
+.myheader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 3rem 8%;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    justify-content: space-between;
+    background-color: rgba(56, 128, 135, 1);
+}
+
+.myheader .logo {
+    font-size: 22px;
+    font-weight: bolder;
+    /* color: #fff; */
+    padding-right: 10px;
+    margin-right: 10rem;
+    background: -webkit-linear-gradient(rgba(29, 205, 254, 1), rgba(33, 208, 179, 1), rgba(52, 245, 198, 1));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* .header .logo i{
+  color: #fff;
+  padding: 0.5rem;
+} */
+.myheader .mynavbar .mytext {
+    font-size: 1.5rem;
+    margin: 0 1rem;
+    color: #fff;
+}
+
+.myheader .mynavbar .mytext:hover {
+    color: #baa6cf;
+}
+
+.myheader .btn {
+    background: transparent;
+    color: tomato;
+    border: 1px solid tomato;
+    font-size: 12px;
+    padding: 8px;
+}
+
+@media (max-width: 767px) {
+    .myheader {
+        padding: 1rem 4%;
+    }
+
+    .myheader .logo {
+        margin-right: 5rem;
+        font-size: 18px;
+    }
+
+    .myheader .mynavbar .mytext {
+        font-size: 1rem;
+        margin: 0 0.5rem;
+    }
+
+    .myheader .btn {
+        font-size: 10px;
+        padding: 6px;
+    }
+}
+
+/* Media query for screens between 768px and 991px */
+@media (min-width: 768px) and (max-width: 991px) {
+    .myheader {
+        padding: 1rem 6%;
+    }
+
+    .myheader .logo {
+        margin-right: 8rem;
+        font-size: 20px;
+    }
+
+    .myheader .mynavbar .mytext {
+        font-size: 1rem;
+        margin: 0 0.75rem;
+    }
+
+    .myheader .btn {
+        font-size: 12px;
+        padding: 7px;
+    }
+}
+
+/* Media query for screens larger than 991px */
+@media (min-width: 992px) {
+    .myheader {
+        padding: 1.5rem 8%;
+    }
+
+    .myheader .logo {
+        margin-right: 10rem;
+        font-size: 22px;
+    }
+
+    .myheader .mynavbar a {
+        font-size: 1.1rem;
+        margin: 0 1rem;
+    }
+
+    .myheader .btn {
+        font-size: 12px;
+        padding: 8px;
+    }
+}
+
+/* header end */
+.topbar {
+    background-color: #5bc0de;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 12px;
+    color: white;
+}
+
+.row-book {
+    border-radius: 10px;
+    padding: 20px 10px;
+    background-color: white;
+    margin-bottom: 30px;
+}
+
+.bg-success {
+    color: rgb(128, 0, 17);
+    text-align: center;
+    width: 950px;
+
+}
+
+.row-nav {
+    margin-bottom: 20px;
+}
+
+.button {
+    display: inline-block;
+    /* background-color:  rgb(186,233,231,1); */
+    /* background-color:  rgb(246,246,242,1); */
+    /* background-color:  rgb(111,179,184,1);  */
+    /* background-color:  rgb(56,128,135,1); */
+    /* background-color:  rgb(130, 222, 156); */
+    /* background-color:  rgb(127, 179, 213); */
+    background-color: rgb(80, 172, 151, 1);
+    border: none;
+    color: rgb(14, 13, 13);
+    text-align: center;
+    font-size: 16px;
+    font-weight: 300;
+    padding: 10px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    border-radius: 10px;
+    text-decoration: none;
+    margin-left: 40px
+}
+
+.button:hover {
+    color: rgb(1, 12, 12);
+    background-color: rgb(26, 137, 111);
+}
+
+.btn {
+    color: white;
+    background-color: rgba(56, 128, 135, 1);
+    border-color: rgba(56, 128, 135, 1);
+}
+
+.btn:hover {
+    background-color: rgba(56, 128, 135, 1);
+}

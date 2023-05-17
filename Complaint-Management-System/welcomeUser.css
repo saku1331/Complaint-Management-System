@@ -1,0 +1,248 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+    /* font-family: 'Roboto', sans-serif; */
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    height: 100%;
+    overflow-y: scroll;
+    background: rgba(246, 246, 242, 1);
+}
+
+.container {
+    max-width: 80%;
+    padding: 34px;
+    margin: auto;
+
+}
+
+.container h1 {
+    text-align: center;
+    /* font-family: 'Sriracha', cursive; */
+    font-size: 40px;
+    padding-bottom: 10px;
+    color: rgba(44, 103, 117, 1);
+}
+
+.container h3 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    /* font-family: 'Sriracha', cursive; */
+    font-size: 30px;
+    color: rgba(44, 103, 117, 1);
+}
+
+p {
+    font-size: 17px;
+    text-align: center;
+    padding-bottom: 10px;
+    /* font-family: 'Sriracha', cursive; */
+}
+
+input,
+textarea {
+    border: 2px solid rgba(56, 128, 135, 1);
+    border-radius: 6px;
+    outline: none;
+    font-size: 16px;
+    width: 80%;
+    margin: 11px 0px;
+    padding: 7px;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.btn {
+    color: white;
+    background: rgba(44, 103, 117, 1);
+    padding: 8px 12px;
+    font-size: 20px;
+    /* border: 2px solid white; */
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.6;
+}
+
+.submitMsg {
+    color: rgba(56, 128, 135, 1);
+    ;
+    font-size: 30px;
+}
+
+.radio-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.radio-p {
+    /* margin-right: 10px; */
+    padding-top: 10px;
+    padding-right: 10px;
+    font-weight: 400;
+}
+
+.select1 {
+    padding: 8px 16px;
+    /* padding-right: 10px; */
+    font-size: 17px;
+    border-radius: 6px;
+    border: 2px solid rgba(56, 128, 135, 1);
+    width: 31%;
+    margin: 11px 0;
+    outline: none;
+}
+
+
+/* Header Styling */
+.header {
+    background-color: rgba(56, 128, 135, 1);
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 0 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: rgba(33, 208, 179, 1);
+}
+
+.logo:hover {
+    color: rgba(29, 205, 254, 1);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.navbar a {
+    margin-left: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+.navbar a:hover {
+    color: rgba(33, 208, 179, 1);
+}
+
+/* Main Content Styling */
+.mid {
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+}
+
+.user-sec {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 30px;
+    width: 80%;
+    max-width: 1000px;
+}
+
+.in-h2 {
+    margin-top: 0;
+    font-size: 36px;
+    font-weight: bold;
+    color: #212121;
+    text-align: center;
+}
+
+.new-reg,
+.view-complaints {
+    margin-top: 40px;
+}
+
+.new-reg h2,
+.view-head {
+    font-size: 24px;
+    font-weight: bold;
+    color: #212121;
+    margin-bottom: 20px;
+}
+
+.articles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.article-wrapper {
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    margin-bottom: 20px;
+    width: 48%;
+}
+
+.article-body {
+    padding: 20px;
+}
+
+.article-body h2 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #212121;
+    margin-bottom: 10px;
+}
+
+.article-body p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.read-more {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: rgba(56, 128, 135, 1);
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.read-more:hover {
+    background-color: rgba(33, 208, 179, 1);
+}
